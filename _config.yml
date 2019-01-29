@@ -1,5 +1,6 @@
 name: Daniel Bashir
 markdown: kramdown
+baseurl: ""
 
 # Includes an icon in the footer for each username you enter
 footer-links:

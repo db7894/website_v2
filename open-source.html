@@ -1,10 +1,10 @@
 ---
-layout: alt
-title: Experience
+layout: default
+title: Open Source
 ---
 
 <ul class="projects clearfix">
-{% for post in site.categories.project %}
+{% for post in site.categories.opensource %}
   <li>
     <div class="project">
       <a class="cover" href="{{ post.url }}">
@@ -33,7 +33,7 @@ title: Experience
           <span class="progress-bar" style="width: {{ post.progress }}%"></span>
         </span>
       {% endif %}
-      <img class="thumb" src="../img/thumbs/{{ post.uid }}.jpg" />
+      <img class="thumb" src="img/thumbs/{{ post.uid }}.jpg" />
       <div class="aspect-two-one"></div>
     </div>
   </li>

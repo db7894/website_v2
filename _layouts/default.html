@@ -4,32 +4,41 @@
 		<title>{{ page.title }}</title>
 		<!-- link to main stylesheet -->
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		<script src="{{ site.baseurl }}js/modernizr-2.0.6.min.js"></script>
 	</head>
 	<body>
 		<nav>
     		<ul>
         		<li><a href="/">Home</a></li>
 	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">Experience</a></li>
+        		<li><a href="/experience">Experience</a></li>
         		<li><a href="/blog">Blog</a></li>
     		</ul>
 		</nav>
-		<div class="container">
-			
-		{{ content }}
-    		
-		</div><!-- /.container -->
-		
-		<footer>
-			{% include svg-icons.html %}
-			<!--
-    			<ul>
-        			<li><a href="dbashir@hmc.edu">email</a></li>
-        			<li><a href="https://github.com/db7894">github.com/db7894</a></li>
-			</ul>
-			-->
-		</footer>
-		
+
+		<div id="container" class="clearfix">
+	 		<div id="main" role="main" class="clearfix">
+
+		 		{{ content }}
+
+	 		</div>
+	 		<footer>
+
+	 		</footer>
+
+ 		</div> <!--! end of #container -->
+
+		<script src="/js/jquery-1.10.2.min.js"></script>
+  	<script src="https://vjs.zencdn.net/7.2.4/video.js"></script>
+  	<script defer src="{{ site.basesurl }}all.js"></script>
+  	<script>
+    	window._gaq = [['_setAccount','{{ site.analytics }}'],['_trackPageview'],['_trackPageLoadTime']];
+    	Modernizr.load({
+      	load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    	});
+  	</script>
+
 		<!--
 		<div class="wrapper-footer">
       			<div class="container">
